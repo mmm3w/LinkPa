@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <View
+            android:id="@+id/main_socket_server_status"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/main_socket_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/main_start_socket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socket"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <EditText
+            android:id="@+id/main_server_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text" />
+
+        <View
+            android:id="@+id/main_server_status"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="16dp" />
+
+        <CheckBox
+            android:id="@+id/main_discovery_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Discovery Mode"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/main_start_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nsd"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
